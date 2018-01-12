@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>crono</title>
+<link href='http://fonts.googleapis.com/css?family=Keania+One' rel='stylesheet' type='text/css'>
+<style type="text/css">
+body, html {
+	margin: 0px;
+	padding: 0px;
+	height: 100%;
+	width: 100%;
+}
+.caja {
+	width: 100%;
+	position: relative;
+}
+.caja img {
+	width: 80%;
+	height: auto;
+	margin-left: 10%;
+}
+.caja .hora {
+	font-family: 'Keania One', cursive;
+	position: absolute;
+	left: 20%;
+	top: 30%;
+	width: 60%;
+	font-size: 4em;
+	color: #FFF;
+	text-align: center;
+	padding-top: 10%;
+}
+.caja .boton1 {
+	float: left;
+	height: 20%;
+	width: 50%;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	cursor: pointer;
+}
+.caja .boton2 {
+	float: left;
+	height: 20%;
+	width: 50%;
+	position: absolute;
+	left: 50%;
+	top: 0px;
+	cursor: pointer;
+}
+@media (max-width: 600px){
+.caja .hora {
+	font-size: 2em;
+}
+}
+
+</style>
+</head>
+
+<body>
+<div class="caja"><img src="crono.png" alt="crono" width="726" height="1065">
+  <div class="boton1"> </div>
+  <div class="boton2"> </div>
+<div class="hora">20:20:200</div>
+</div>
+</body>
+</html>

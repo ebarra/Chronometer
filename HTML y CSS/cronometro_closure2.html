@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head><title>Event Example</title><meta charset="UTF-8">
+<script type="text/javascript" src="cronometro.js"></script>
+<script type="text/javascript">
+document.addEventListener("DOMContentLoaded", function(event) {
+  CRONO.init();
+});
+
+</script>
+</head>
+<body>
+<h2>Cronómetro</h2>
+
+<h2><span id="crono"> 0.0 </span> segundos </h2>
+
+<button type="button" onclick="CRONO.cambiar()"> arrancar/parar </button>
+<button type="button" onclick="CRONO.inicializar()">  inicializar </button>
+</body>
+</html>

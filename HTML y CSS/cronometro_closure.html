@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head><title>Event Example</title><meta charset="UTF-8">
+<script type="text/javascript">
+document.addEventListener("DOMContentLoaded", function(event) {
+  CRONO.init();
+});
+ var CRONO = (function(){
+    var t, crono,cambiar_button,inicializar_button ;
+    var init = function(){
+      crono = document.getElementById("crono");
+    };
+    var mostrar = function()  {
+      crono.innerHTML = (+crono.innerHTML + 0.1).toFixed(1);
+    };
+    var arrancar = function() {
+      t=setInterval(mostrar, 100);
+    };
+    var parar = function()    {
+      clearInterval(t);  t=undefined;
+    };
+    var cambiar = function()  {
+      if (!t) arrancar();
+      else parar();
+    };
+    var inicializar = function(){
+      crono.innerHTML = "0.0";
+    };
+    return {
+      init: init,
+      cambiar: cambiar,
+      inicializar: inicializar
+    }
+})();
+</script>
+</head>
+<body>
+<h2>Cronómetro</h2>
+
+<h2><span id="crono"> 0.0 </span> segundos </h2>
+
+<button type="button" onclick="CRONO.cambiar()"> arrancar/parar </button>
+<button type="button" onclick="CRONO.inicializar()">  inicializar </button>
+</body>
+</html>

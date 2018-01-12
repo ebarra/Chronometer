@@ -1,0 +1,126 @@
+* {
+     -webkit-box-sizing: border-box;
+             box-sizing: border-box;
+}
+
+html, body{
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+    width: 100%;
+}
+
+body{
+    background: #FFF;
+    color: #333;
+    font-size: 16px;
+    font-weight: 300;
+    font-family: 'Helvetica Neue';
+}
+
+.app {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column wrap;
+            flex-flow: column wrap;
+    height: 100vh;
+    width: 100%;
+}
+
+
+.header {
+    background: #387EF5;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 44px;
+    width: 100%
+}
+
+.header .title {
+    color: white;
+    font-size: 1.1rem;
+    margin: auto;
+    text-align: center;    
+}
+
+
+.main {
+    margin: 0 auto;
+    max-width: 500px;
+    width: 100%;
+}
+
+.display {
+    color: #292929;
+}
+
+.display .state {
+    display: block;
+    font-size: 1rem;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.display .segments {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+}
+
+.display .mins,
+.display .secs {
+    color: #292929;
+    font-size: 7rem;
+}
+
+.display .millis {
+    font-size: 2rem;
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+}
+
+.actions {
+    padding: 10px 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    
+}
+
+.actions .btn {
+    margin: 0 5px;
+}
+
+.btn {
+    background: #387EF5;    
+    border: solid 1px #387EF5;
+    border-radius: 7px;
+    color: white;
+    cursor: pointer;
+    font-size: 0.8em;    
+    outline: none;
+    padding: 10px 50px;
+    -webkit-transition: 300ms all;
+    transition: 300ms all;
+}
+
+.btn:hover{
+    opacity: 0.9;
+}
+
+.btn.disabled {
+    opacity: 0.5;
+}

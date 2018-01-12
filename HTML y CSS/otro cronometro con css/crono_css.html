@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>relioj CSS</title><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<link href='http://fonts.googleapis.com/css?family=Share+Tech+Mono' rel='stylesheet' type='text/css'>
+<style type="text/css">
+body, html {
+	margin: 0px;
+	padding: 0px;
+	height: 100%;
+	width: 100%;
+	background-color: #000;
+}
+.clear {
+	clear: both;
+}
+.mitad {
+	background-color: #000000;
+	color: #FFF;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 5em;
+	font-weight: bold;
+	padding-top: 0.5em;
+	padding-bottom: 0.3em;
+	width: 5em;
+	text-align: center;
+	margin-top: 0px;
+	margin-right: auto;
+	margin-bottom: 0px;
+	margin-left: auto;
+}
+.contenedor {
+	background-color: #333;
+	position: relative;
+	-webkit-box-shadow: 0px 3px 3px 0px rgba(255, 255, 255, 1);
+	box-shadow: 0px 3px 3px 0px rgba(255, 255, 255, 1);
+	background-image: linear-gradient(bottom, rgb(60,60,60) 0%, rgb(0,0,0) 87%);
+	background-image: -o-linear-gradient(bottom, rgb(60,60,60) 0%, rgb(0,0,0) 87%);
+	background-image: -moz-linear-gradient(bottom, rgb(60,60,60) 0%, rgb(0,0,0) 87%);
+	background-image: -webkit-linear-gradient(bottom, rgb(60,60,60) 0%, rgb(0,0,0) 87%);
+87%);
+	background-image: -ms-linear-linear-gradient(bottom, rgb(30,30,30) 0%, rgb(0,0,0) 87%);
+	background-image: -webkit-gradient(
+		linear,
+		left bottom,
+		left top,
+		color-stop(0, rgb(60,60,60)),
+		color-stop(0.87, rgb(0,0,0))
+	);
+	padding: 5px;
+	margin: 0px;
+}
+.sombra {
+	background-color: rgba(50,50,50,0.5);
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	height: 50%;
+	width: 100%;
+}
+
+.reloj {
+	width: 100%;
+	text-align: center;
+	padding-top: 10%;
+}
+#vector {
+	height: 60%;
+	width: 60%;
+}
+</style>
+
+<script type="text/javascript">
+
+function mostrar_hora( ) {
+      var d = new Date();
+      var h = d.getHours();
+      var m = d.getMinutes();
+      var s = d.getSeconds();
+	  
+	  if (m<10){m = "0"+m}
+	  if (s<10){s = "0"+s}
+	  if (h<10){h = "0"+h}
+	  document.getElementById('hora').innerHTML=h;
+	  document.getElementById('minutos').innerHTML=m;
+	  document.getElementById('segundos').innerHTML=s;
+    }
+    setInterval(function(){mostrar_hora();}, 1000);
+    mostrar_hora();
+
+</script>
+</head>
+<body>
+<div class="mitad">
+
+  <span class="contenedor"><span id="hora">11</span><div class="sombra"></div></span>:<span class="contenedor"><span id="minutos">42</span><div class="sombra"></div>
+  </span >:<span class="contenedor"><span id="segundos">42</span><div class="sombra"></div>
+  </span >
+
+<div class="clear"> </div>
+</div>
+<div class="reloj">
+
+
+</div>
+
+
+</body></html>
