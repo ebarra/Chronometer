@@ -72,10 +72,9 @@ export default class Chronometer extends React.Component {
         let resetDisabled = (true === run || (false === run && (this.state.millis > 0 || this.state.seconds > 0 || this.state.minutes > 0 )));
         return (
             <div className="app">
-                <main className="main">
                     <div className="display">
-                        <div className="state">{run ? 'Running' : 'Stop'}</div>
-                        <div className="segments">
+                        <div className="state">{run ? 'Status: Running' : 'Status: Stopped'}</div>
+                        <div className="numbers">
                             <span className="mins">{this.zeroPad(this.state.minutes)}:</span>
                             <span className="secs">{this.zeroPad(this.state.seconds)} </span>
                             <span className="millis">.0{this.state.millis}</span>
@@ -92,7 +91,6 @@ export default class Chronometer extends React.Component {
                         <button className={"btn reset " + ( resetDisabled ? '' : 'disabled')}
                             onClick={this._handleResetClick}>Reset</button>
                     </div>
-                </main>
             </div>);
     }
 }
