@@ -3,13 +3,13 @@ import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
-import { CronometroComponent } from './cronometro/cronometro.component';
+import { CronometroComponent } from './chronometer/chronometer.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    CronometroComponent
+    ChronometerComponent
   ],
   imports: [
     BrowserModule
