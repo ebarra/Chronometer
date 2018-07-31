@@ -24,18 +24,14 @@ body{
     max-width: 500px;
 }
 
-.display {
-    color: #292929;
-}
-
-.display .state {
+.state {
     display: block;
     font-size: 1rem;
     padding: 10px 0;
     text-align: center;
 }
 
-.display .numbers {
+.numbers {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
@@ -47,13 +43,12 @@ body{
     justify-content: center;
 }
 
-.display .mins,
-.display .secs {
+.minutes,.seconds {
     color: #292929;
     font-size: 7rem;
 }
 
-.display .millis {
+.millis {
     font-size: 2rem;
     -ms-flex-item-align: end;
     align-self: flex-end;
@@ -66,7 +61,7 @@ body{
     display: flex;
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 .actions .btn {
